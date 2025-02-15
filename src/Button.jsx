@@ -12,6 +12,7 @@ export default function Button({
   outline,
   rounded,
 }) {
+  console.log("git change test");
   const classes = twMerge(
     className("px-3 py-1.5 border flex items-center", {
       "border-blue-500 bg-blue-500 text-white": primary,
