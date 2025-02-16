@@ -11,10 +11,10 @@ export default function Button({
   danger,
   outline,
   rounded,
+  ...rest
 }) {
-  console.log("git change test");
   const classes = twMerge(
-    className("px-3 py-1.5 border flex items-center", {
+    className(rest.className, "px-3 py-1.5 border flex items-center", {
       "border-blue-500 bg-blue-500 text-white": primary,
       "border-gray-800 bg-gray-800 text-white": secondary,
       "border-green-500 bg-green-500 text-white": success,
@@ -30,7 +30,11 @@ export default function Button({
     })
   );
 
-  return <button className={classes}>{children}</button>;
+  return (
+    <button {...rest} className={classes}>
+      {children}
+    </button>
+  );
 }
 
 Button.propTypes = {

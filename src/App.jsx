@@ -1,38 +1,11 @@
-import React from "react";
-import Button from "./Button";
-import { AiFillBug, AiFillApple, AiFillBulb } from "react-icons/ai";
+import { useState } from "react";
+import Link from "./components/Link";
 
 export default function App() {
   return (
-    <>
-      <div>
-        <Button true rounded primary>
-          <AiFillBug />
-          Fuck Yeah
-        </Button>
-      </div>
-      <div>
-        <Button true rounded secondary>
-          <AiFillApple />
-          Buy Now!
-        </Button>
-      </div>
-      <div>
-        <Button outline rounded success>
-          <AiFillBulb />
-          See Deal!
-        </Button>
-      </div>
-      <div>
-        <Button outline rounded warning>
-          Hide Ads!
-        </Button>
-      </div>
-      <div>
-        <Button outline rounded danger>
-          Something!
-        </Button>
-      </div>
-    </>
+    <div className="flex ">
+      <Link to="/accordion">Go to accordion</Link>
+      <Link to="/dropdown">Go to dropdown</Link>
+    </div>
   );
 }
